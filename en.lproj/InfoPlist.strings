@@ -1,0 +1,33 @@
+/* Localized versions of Info.plist keys */
+
+NSHumanReadableCopyright = "© Yukka-S, 2010";
+/* AMApplication localized strings */
+/* e.g. "TextEdit" = "TextEdit"; */
+
+/* AMCategory localized strings */
+/* e.g. "Text" = "Text"; */
+
+AMName = "Nib Decompiler";
+
+/* AMDefaultParameters localized values */
+/* e.g. myDefaultIntegerParameter = 0; */
+/* e.g. myDefaultStringParameter = "Default String Value"; */
+
+/* AMDescription localized strings */
+AMDAlert = "(* AMDAlert text goes here. (optional) *)";
+AMDInput = "(* AMDInput text to further explain the types accepted as input goes here. (optional) *)";
+AMDNote = "(* AMDNote text goes here. (optional) *)";
+AMDOptions = "(* AMDOptions text to further explain configuration options in the UI goes here. (optional) *)";
+AMDResult = "(* AMDResult text to further explain the types provided as output goes here. (optional) *)";
+AMDRequires = "(* AMDRequires text to explain anything outside of Automator required for the action's operation, e.g. a web page open in Safari, goes here. (optional) *)";
+AMDSummary = "(* AMDSummary text to explain what your action does goes here. *)";
+AMDWebsite = "(* AMDWebsite URL to additional information or documentation for the action goes here. (optional) *)";
+
+/* AMKeyword localized strings */
+/* e.g. "Filter" = "Filter"; */
+
+/* AMWarning localized strings */
+ApplyButton = "(* Button label for user to add proposed Action, e.g. Add. *)";
+IgnoreButton = "(* Button label for user not to add proposed Action, e.g. Don't Add. *)";
+Message = "(* Warning message presented to user goes here. *)";
+
