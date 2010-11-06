@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict>
-		<key>NibDecompiler.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D899DFE41284865D00F55CA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D899E0341285206F00F55CA4</key>
 		<dict>
 			<key>primary</key>
