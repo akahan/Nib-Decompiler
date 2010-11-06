@@ -23,6 +23,7 @@
 		D899DFF61284865D00F55CA4 /* NibDecompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D899DFF51284865D00F55CA4 /* NibDecompiler.m */; };
 		D899E0181284B3C200F55CA4 /* classes.nib in Resources */ = {isa = PBXBuildFile; fileRef = D899E0161284B3C200F55CA4 /* classes.nib */; };
 		D899E0191284B3C200F55CA4 /* info.nib in Resources */ = {isa = PBXBuildFile; fileRef = D899E0171284B3C200F55CA4 /* info.nib */; };
+		D8C748D812857682007CDB08 /* README in Resources */ = {isa = PBXBuildFile; fileRef = D8C748D712857682007CDB08 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D899E0171284B3C200F55CA4 /* info.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = info.nib; sourceTree = "<group>"; };
 		D8C748D2128575F3007CDB08 /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8C748D3128575FE007CDB08 /* ru */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8C748D712857682007CDB08 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		D899DFDC1284865D00F55CA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8C748D712857682007CDB08 /* README */,
 				D8C748D1128575F3007CDB08 /* InfoPlist.strings */,
 				D899E0161284B3C200F55CA4 /* classes.nib */,
 				D899E0171284B3C200F55CA4 /* info.nib */,
@@ -165,6 +168,7 @@
 			files = (
 				D899E0181284B3C200F55CA4 /* classes.nib in Resources */,
 				D899E0191284B3C200F55CA4 /* info.nib in Resources */,
+				D8C748D812857682007CDB08 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

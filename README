@@ -1,0 +1,2 @@
+Copy the NibDecompiler.workflow into the Libraries/Services folder
+Compile NibDecompiler.xcodeproj and copy NibDecompiler.action into the Libraries/Automator folder
