@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAppleScriptBuildPhase section */
+		D899DFDE1284865D00F55CA4 /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXAppleScriptBuildPhase section */
+
+/* Begin PBXBuildFile section */
+		D899DFE81284865D00F55CA4 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D899DFE71284865D00F55CA4 /* Automator.framework */; };
+		D899DFEA1284865D00F55CA4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D899DFE91284865D00F55CA4 /* Cocoa.framework */; };
+		D899DFF61284865D00F55CA4 /* NibDecompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D899DFF51284865D00F55CA4 /* NibDecompiler.m */; };
+		D899E0181284B3C200F55CA4 /* classes.nib in Resources */ = {isa = PBXBuildFile; fileRef = D899E0161284B3C200F55CA4 /* classes.nib */; };
+		D899E0191284B3C200F55CA4 /* info.nib in Resources */ = {isa = PBXBuildFile; fileRef = D899E0171284B3C200F55CA4 /* info.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D899DFE51284865D00F55CA4 /* NibDecompiler.action */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NibDecompiler.action; sourceTree = BUILT_PRODUCTS_DIR; };
+		D899DFE71284865D00F55CA4 /* Automator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Automator.framework; path = System/Library/Frameworks/Automator.framework; sourceTree = SDKROOT; };
+		D899DFE91284865D00F55CA4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D899DFEB1284865D00F55CA4 /* NibDecompiler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NibDecompiler-Info.plist"; sourceTree = "<group>"; };
+		D899DFEC1284865D00F55CA4 /* NibDecompiler_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDecompiler_Prefix.pch; sourceTree = "<group>"; };
+		D899DFF31284865D00F55CA4 /* NibDecompiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDecompiler.h; sourceTree = "<group>"; };
+		D899DFF51284865D00F55CA4 /* NibDecompiler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NibDecompiler.m; sourceTree = "<group>"; };
+		D899E0161284B3C200F55CA4 /* classes.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.nib; sourceTree = "<group>"; };
+		D899E0171284B3C200F55CA4 /* info.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = info.nib; sourceTree = "<group>"; };
+		D8C748D2128575F3007CDB08 /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8C748D3128575FE007CDB08 /* ru */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D899DFE01284865D00F55CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D899DFE81284865D00F55CA4 /* Automator.framework in Frameworks */,
+				D899DFEA1284865D00F55CA4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D899DFD31284865D00F55CA4 = {
+			isa = PBXGroup;
+			children = (
+				D899DFDA1284865D00F55CA4 /* Classes */,
+				D899DFDB1284865D00F55CA4 /* Other Sources */,
+				D899DFDC1284865D00F55CA4 /* Resources */,
+				D899DFDD1284865D00F55CA4 /* Frameworks */,
+				D899DFE61284865D00F55CA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D899DFDA1284865D00F55CA4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D899DFF31284865D00F55CA4 /* NibDecompiler.h */,
+				D899DFF51284865D00F55CA4 /* NibDecompiler.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D899DFDB1284865D00F55CA4 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D899DFEC1284865D00F55CA4 /* NibDecompiler_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D899DFDC1284865D00F55CA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8C748D1128575F3007CDB08 /* InfoPlist.strings */,
+				D899E0161284B3C200F55CA4 /* classes.nib */,
+				D899E0171284B3C200F55CA4 /* info.nib */,
+				D899DFEB1284865D00F55CA4 /* NibDecompiler-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D899DFDD1284865D00F55CA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D899DFE71284865D00F55CA4 /* Automator.framework */,
+				D899DFE91284865D00F55CA4 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D899DFE61284865D00F55CA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D899DFE51284865D00F55CA4 /* NibDecompiler.action */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D899DFE41284865D00F55CA4 /* NibDecompiler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D899DFF91284865D00F55CA4 /* Build configuration list for PBXNativeTarget "NibDecompiler" */;
+			buildPhases = (
+				D899DFDE1284865D00F55CA4 /* AppleScript */,
+				D899DFDF1284865D00F55CA4 /* Sources */,
+				D899DFE01284865D00F55CA4 /* Frameworks */,
+				D899DFE11284865D00F55CA4 /* Resources */,
+				D899DFE21284865D00F55CA4 /* Rez */,
+				D899DFE31284865D00F55CA4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NibDecompiler;
+			productName = NibDecompiler;
+			productReference = D899DFE51284865D00F55CA4 /* NibDecompiler.action */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D899DFD51284865D00F55CA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Yukka-S";
+			};
+			buildConfigurationList = D899DFD81284865D00F55CA4 /* Build configuration list for PBXProject "NibDecompiler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"ru-RU",
+				ru,
+			);
+			mainGroup = D899DFD31284865D00F55CA4;
+			productRefGroup = D899DFE61284865D00F55CA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D899DFE41284865D00F55CA4 /* NibDecompiler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D899DFE11284865D00F55CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D899E0181284B3C200F55CA4 /* classes.nib in Resources */,
+				D899E0191284B3C200F55CA4 /* info.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		D899DFE21284865D00F55CA4 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D899DFE31284865D00F55CA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/amlint \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D899DFDF1284865D00F55CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D899DFF61284865D00F55CA4 /* NibDecompiler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8C748D1128575F3007CDB08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8C748D2128575F3007CDB08 /* en */,
+				D8C748D3128575FE007CDB08 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D899DFF71284865D00F55CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D899DFF81284865D00F55CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D899DFFA1284865D00F55CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(HOME)/Library/Automator";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NibDecompiler_Prefix.pch;
+				INFOPLIST_FILE = "NibDecompiler-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Automator";
+				OTHER_OSAFLAGS = "-x -t 0 -c 0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = action;
+			};
+			name = Debug;
+		};
+		D899DFFB1284865D00F55CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "$(HOME)/Library/Automator";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NibDecompiler_Prefix.pch;
+				INFOPLIST_FILE = "NibDecompiler-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Automator";
+				OTHER_OSAFLAGS = "-x -t 0 -c 0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = action;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D899DFD81284865D00F55CA4 /* Build configuration list for PBXProject "NibDecompiler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D899DFF71284865D00F55CA4 /* Debug */,
+				D899DFF81284865D00F55CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D899DFF91284865D00F55CA4 /* Build configuration list for PBXNativeTarget "NibDecompiler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D899DFFA1284865D00F55CA4 /* Debug */,
+				D899DFFB1284865D00F55CA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D899DFD51284865D00F55CA4 /* Project object */;
+}
