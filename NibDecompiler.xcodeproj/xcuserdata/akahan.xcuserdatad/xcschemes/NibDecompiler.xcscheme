@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme>
+   <BuildAction
+      buildConfiguration = "Release"
+      parallelizeBuildables = "NO">
+      <BuildableProductReferences>
+         <BuildableProductReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D899E0341285206F00F55CA4"
+            ReferencedContainer = "container:NibDecompiler.xcodeproj">
+         </BuildableProductReference>
+      </BuildableProductReferences>
+   </BuildAction>
+   <TestAction
+      failureAction = "0">
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      loadSymbolsForSpecifiedModules = "NO"
+      displayScaleIsEnabled = "NO"
+      displayScale = "1.00">
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      displayScaleIsEnabled = "NO"
+      displayScale = "1.00"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+   </ProfileAction>
+   <ArchiveAction>
+      <ArchivingStrategy
+         StrategyType = "Xcode.IDEStandardArchivingStrategies.ArchivingStrategyType.DiskImage">
+         <StrategyContent>
+         </StrategyContent>
+      </ArchivingStrategy>
+   </ArchiveAction>
+</Scheme>
