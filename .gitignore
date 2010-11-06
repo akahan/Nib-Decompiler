@@ -1,0 +1,8 @@
+.DS_Store
+*.mode1v3
+*.xcuserstate
+*.xcuserdatad
+*.pbxuser
+*.perspectivev3
+xcuserdata
+build/
