@@ -33,7 +33,7 @@
 		D899DFEB1284865D00F55CA4 /* NibDecompiler-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NibDecompiler-Info.plist"; sourceTree = "<group>"; };
 		D899DFEC1284865D00F55CA4 /* NibDecompiler_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDecompiler_Prefix.pch; sourceTree = "<group>"; };
 		D899DFF31284865D00F55CA4 /* NibDecompiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDecompiler.h; sourceTree = "<group>"; };
-		D899DFF51284865D00F55CA4 /* NibDecompiler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NibDecompiler.m; sourceTree = "<group>"; };
+		D899DFF51284865D00F55CA4 /* NibDecompiler.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = NibDecompiler.m; sourceTree = "<group>"; };
 		D899E0161284B3C200F55CA4 /* classes.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.nib; sourceTree = "<group>"; };
 		D899E0171284B3C200F55CA4 /* info.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = info.nib; sourceTree = "<group>"; };
 		D8C748D2128575F3007CDB08 /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
