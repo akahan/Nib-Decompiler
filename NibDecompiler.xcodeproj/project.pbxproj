@@ -18,6 +18,7 @@
 /* End PBXAppleScriptBuildPhase section */
 
 /* Begin PBXBuildFile section */
+		3C2C75F3213AFFF40097C3F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8C748D1128575F3007CDB08 /* InfoPlist.strings */; };
 		D899DFE81284865D00F55CA4 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D899DFE71284865D00F55CA4 /* Automator.framework */; };
 		D899DFEA1284865D00F55CA4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D899DFE91284865D00F55CA4 /* Cocoa.framework */; };
 		D899DFF61284865D00F55CA4 /* NibDecompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = D899DFF51284865D00F55CA4 /* NibDecompiler.m */; };
@@ -34,7 +35,7 @@
 		D899DFEC1284865D00F55CA4 /* NibDecompiler_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDecompiler_Prefix.pch; sourceTree = "<group>"; };
 		D899DFF31284865D00F55CA4 /* NibDecompiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDecompiler.h; sourceTree = "<group>"; };
 		D899DFF51284865D00F55CA4 /* NibDecompiler.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = NibDecompiler.m; sourceTree = "<group>"; };
-		D899E0161284B3C200F55CA4 /* classes.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.nib; sourceTree = "<group>"; };
+		D899E0161284B3C200F55CA4 /* classes.nib */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = classes.nib; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.plist; };
 		D899E0171284B3C200F55CA4 /* info.nib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = info.nib; sourceTree = "<group>"; };
 		D8C748D2128575F3007CDB08 /* en */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8C748D3128575FE007CDB08 /* ru */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -168,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D899E0181284B3C200F55CA4 /* classes.nib in Resources */,
+				3C2C75F3213AFFF40097C3F8 /* InfoPlist.strings in Resources */,
 				D899E0191284B3C200F55CA4 /* info.nib in Resources */,
 				D8C748D812857682007CDB08 /* README in Resources */,
 			);

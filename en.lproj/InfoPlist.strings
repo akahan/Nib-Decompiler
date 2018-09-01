@@ -5,4 +5,6 @@ NSHumanReadableCopyright = "© Yukka-S, 2010";
 AMName = "Nib Decompiler";
 
 /* AMDescription localized strings */
-AMDSummary = "Decompile compiled nib for open it in Interface Builder";
+AMDescription = {
+    AMDSummary = "Decompile a compiled nib file to open it in Interface Builder.";
+};

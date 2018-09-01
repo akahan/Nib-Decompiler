@@ -5,4 +5,6 @@ NSHumanReadableCopyright = "© Yukka-S, 2010";
 AMName = "Декомпилятор Nib";
 
 /* AMDescription localized strings */
-AMDSummary = "Декомпилирует nib файлы для открытия в Interface Builder";
+AMDescription = {
+    AMDSummary = "Декомпилирует nib файлы для открытия в Interface Builder";
+};
