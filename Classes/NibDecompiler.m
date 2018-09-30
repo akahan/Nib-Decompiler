@@ -8,46 +8,98 @@
 
 #import "NibDecompiler.h"
 
-
 @implementation NibDecompiler
 
+static NSString *const IBObjectDataKeyNSNextOid = @"NSNextOid";
+
+// https://stackoverflow.com/questions/25397048/extract-cfkeyedarchiveruid-value
+typedef struct CFRuntimeBase {
+  void* isa;
+  uint32_t runtimeInfo;
+} CFRuntimeBase;
+typedef struct CFKeyedArchiverUID {
+  CFRuntimeBase base;
+  uint32_t value;
+} CFKeyedArchiverUID;
+
+static id readPlistFileContents(NSString *path) {
+  NSInputStream *inputStream = [NSInputStream inputStreamWithFileAtPath:path];
+  [inputStream open];
+  return [NSPropertyListSerialization propertyListWithStream:inputStream options:NSPropertyListMutableContainers format:NULL error:NULL];
+}
+static void writeBplistToFile(id plist, NSString *path) {
+  NSOutputStream *outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+  [outputStream open];
+  [NSPropertyListSerialization writePropertyList:plist toStream:outputStream format:NSPropertyListBinaryFormat_v1_0 options:0 error:NULL];
+}
+static uint32_t cfKeyedArchiverUIDValue(id cfKeyedArchiverUID) {
+  return ((__bridge CFKeyedArchiverUID*)cfKeyedArchiverUID)->value;
+}
+static uint32_t topUIDInKeyedArchiverPlist(NSDictionary *keyedArchiverPlist, NSString *key) {
+  NSDictionary *dollarTop = keyedArchiverPlist[@"$top"];
+  return cfKeyedArchiverUIDValue(dollarTop[key]);
+}
+static id objectInKeyedArchiverPlistForUID(id keyedArchiverPlist, uint32_t uid) {
+  NSArray *dollarObjects = keyedArchiverPlist[@"$objects"];
+  return dollarObjects[uid];
+}
+static NSUInteger numberOfObjectsInKeyedArchiverPlist(id keyedArchiverPlist) {
+  NSArray *dollarObjects = keyedArchiverPlist[@"$objects"];
+  return dollarObjects.count;
+}
+static void processKeyedobjectsKeyedArchiverPlist(NSString *path) {
+  NSMutableDictionary *plist = readPlistFileContents(path);
+  uint32_t ibObjectDataUID = topUIDInKeyedArchiverPlist(plist, @"IB.objectdata");
+  
+  NSMutableDictionary *ibObjectData = objectInKeyedArchiverPlistForUID(plist, ibObjectDataUID);
+  ibObjectData[IBObjectDataKeyNSNextOid] = @(numberOfObjectsInKeyedArchiverPlist(plist) * 2);
+  
+  writeBplistToFile(plist, path);
+}
 - (id)runWithInput:(id)input fromAction:(AMAction *)anAction error:(NSDictionary **)errorInfo
 {
-  if([input isKindOfClass:[NSArray class]])
+  if (![input isKindOfClass:[NSArray class]])
   {
-    NSFileManager * manager = [NSFileManager defaultManager];
-    NSBundle * bundle = [NSBundle bundleForClass:[self class]];
-    
-    for(id itemPath in input)
-    {
-      if([itemPath isKindOfClass:[NSString class]] && [[itemPath pathExtension] isEqualToString:@"nib"])
-      {
-        if(![[NSWorkspace sharedWorkspace] isFilePackageAtPath:itemPath])
-        {
-          NSString * keyedobjectsPathOld = [NSString stringWithFormat:@"%@/keyedobjects.nib", [itemPath stringByDeletingLastPathComponent]];
-          NSString * keyedobjectsPathNew = [NSString stringWithFormat:@"%@/keyedobjects.nib", itemPath];
-          [manager moveItemAtPath:itemPath toPath:keyedobjectsPathOld error:NULL];
-          [manager createDirectoryAtPath:itemPath withIntermediateDirectories:YES attributes:nil error:NULL];
-          [manager moveItemAtPath:keyedobjectsPathOld toPath:keyedobjectsPathNew error:NULL];
-        }
-        
-        NSString * classesNibPathNew = [NSString stringWithFormat:@"%@/classes.nib", itemPath];
-        NSString * infoNibPathNew = [NSString stringWithFormat:@"%@/info.nib", itemPath];
-        NSString * classesNibPathOld = [bundle pathForResource:@"classes" ofType:@"nib"];
-        NSString * infoNibPathOld = [bundle pathForResource:@"info" ofType:@"nib"];
-        
-        [manager copyItemAtPath:classesNibPathOld toPath:classesNibPathNew error:NULL];
-        [manager copyItemAtPath:infoNibPathOld toPath:infoNibPathNew error:NULL];
-      }
-      else
-      {
-        NSLog(@"Class of the item must be NSString (current classname is %@) or file is not nib file",[itemPath className]);
-      }
-    }
+    NSLog(@"Class of the input must be NSArray (current classname is %@)", [input className]);
+    return input;
   }
-  else
+  
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+  NSBundle *bundle = self.bundle;
+  
+  for (NSString *itemPath in input)
   {
-    NSLog(@"Class of the input must be NSArray (current classname is %@)",[input className]);
+    if (![itemPath isKindOfClass:[NSString class]])
+    {
+      NSLog(@"Class of the item must be NSString (current classname is %@)", [itemPath className]);
+      continue;
+    }
+    if (![[itemPath pathExtension] isEqualToString:@"nib"])
+    {
+      NSLog(@"File %@ is not a nib file", itemPath);
+      continue;
+    }
+    
+    processKeyedobjectsKeyedArchiverPlist(itemPath);
+    
+    if (![workspace isFilePackageAtPath:itemPath])
+    {
+      NSString *keyedobjectsPathOld = [NSString stringWithFormat:@"%@/keyedobjects.nib", [itemPath stringByDeletingLastPathComponent]];
+      NSString *keyedobjectsPathNew = [NSString stringWithFormat:@"%@/keyedobjects.nib", itemPath];
+      
+      [fileManager moveItemAtPath:itemPath toPath:keyedobjectsPathOld error:NULL];
+      [fileManager createDirectoryAtPath:itemPath withIntermediateDirectories:YES attributes:nil error:NULL];
+      [fileManager moveItemAtPath:keyedobjectsPathOld toPath:keyedobjectsPathNew error:NULL];
+    }
+    
+    NSString *classesNibPathNew = [NSString stringWithFormat:@"%@/classes.nib", itemPath];
+    NSString *infoNibPathNew = [NSString stringWithFormat:@"%@/info.nib", itemPath];
+    NSString *classesNibPathOld = [bundle pathForResource:@"classes" ofType:@"nib"];
+    NSString *infoNibPathOld = [bundle pathForResource:@"info" ofType:@"nib"];
+    
+    [fileManager copyItemAtPath:classesNibPathOld toPath:classesNibPathNew error:NULL];
+    [fileManager copyItemAtPath:infoNibPathOld toPath:infoNibPathNew error:NULL];
   }
 	
 	return input;
